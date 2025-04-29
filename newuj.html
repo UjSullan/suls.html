@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <script>console.log("Hello World")</script>
+    
+   <input type="text" placeholder="Enter a Username" id="Username" value="">
+   <input type="password" placeholder="Enter Password" id="pass">
+   <input type="button" name="" id="" value="Click" onclick="submitbtn()">
+
+   <input type="checkbox" name="" id="agree"> I agree a Course <select name="" id="Course">
+
+    <option value="BSIT">BSIT</option>
+    <option value="BEED">BEED</option>
+    <option value="BSHM">BSHM</option>
+    <option value="INTERCOURSE">INTERCOURSE</option>
+   </select>
+
+   <div id="viewid"></div>
+
+   <script>
+    function submitbtn(){
+        let user = document.getElementById('Username').value;
+        let pass = document.getElementById('pass').value;
+        let agree = document.getElementById('agree').checked;
+        let Course = document.getElementById('Course').checked;
+
+
+        if(user == ""&& pass==""){
+            alert("field is empty");
+
+        }else if( user == "aces" &&  pass =="123" ){
+            window.location.href = "www.google.com"
+        }else if(user != "aces" && pass !="123"){
+            alert("wrong username and paswword")
+        }
+
+        output += "User:" + user + "<br>Password: " + pass;
+
+        if(agree){
+            output += "<br> Agreed to Course: " + course;
+        }
+      document.getElementById('viewid').innerHTML = output;   
+    }
+    
+   </script>
+
+</head>
+<body>
+    
+</body>
+</html>

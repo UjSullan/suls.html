@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Bunga ng Bayan</title>
+  <link rel="stylesheet" href="css/register.css">
+
+
+  <style>
+    /* (Same styles here — your CSS is already good!) */
+  </style>
+</head>
+<body>
+  <div class="container form-page">
+    <form class="form-box" onsubmit="return registerUser(event)">
+      <h2>Register</h2>
+      <input type="text" id="fullName" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+      <p id="error-msg" class="error-message">Passwords do not match.</p>
+      <button type="submit" class="btn">Register</button>
+      <p class="form-link">Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+  </div>
+
+  <script>
+    function registerUser(event) {
+      event.preventDefault(); // Prevent form submit
+
+      const fullName = document.getElementById("fullName").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+      const errorMsg = document.getElementById("error-msg");
+
+      if (password !== confirmPassword) {
+        errorMsg.style.display = "block";
+        return false;
+      }
+
+      // Save user info in cookies
+      document.cookie = `fullName=${encodeURIComponent(fullName)}; path=/`;
+      document.cookie = `email=${encodeURIComponent(email)}; path=/`;
+      document.cookie = `password=${encodeURIComponent(password)}; path=/`;
+
+      alert("Registered successfully! Please login.");
+      window.location.href = "login.html";
+      return true;
+    }
+  </script>
+</body>
+</html>

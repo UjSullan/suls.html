@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home | Bunga ng Bayan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  
+<body>
+  <header>
+    <div class="logo">
+      <img src="fruits images/logo1.jpg" alt="Bunga ng Bayan Logo" class="logo-img">
+      <div class="logo-text">
+        <h1>Bunga ng Bayan</h1>
+        <p>A Taste of Philippine Exclusive Fruits</p>
+      </div>
+
+      
+
+      
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="fruits.html" onclick="return checkLoginLink(event)">Fruits</a>
+      <a href="contact.html" onclick="return checkLoginLink(event)">Contact</a>
+      <a href="login.html" id="login-btn" class="btn">Login</a>
+      <a href="#" id="logout-btn" class="btn logout" style="display: none;" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+  
+  <main class="container landing">
+    <div class="landing-text">
+      <h2>Welcome to Bunga ng Bayan</h2>
+      <p>Step into the colorful world of Philippine fruits — rare, exotic, and deeply rooted in our culture. Each fruit carries the flavor of our heritage.</p>
+      <a href="#" onclick="checkLogin()" class="btn explore-btn">🍃 Explore Now</a>
+    </div>
+  </main>
+  
+  
+    <!-- <div class="landing-image">
+      <img src="fruits images/fruits.jpg" alt="Philippine Fruits" />
+    </div> -->
+  </main>
+
+  <section class="container intro">
+    <h2>Introduction</h2>
+    <p><strong>Bunga ng Bayan</strong> is a tribute to the Philippines’ rich and vibrant biodiversity...</p>
+    <p>Every fruit tells a story about our islands, culture, and people. Let's explore them together!</p>
+  </section>
+
+  <section class="container highlights">
+    <h2>Fruit Highlights</h2>
+    <div class="highlight-cards">
+      <div class="card">
+        <img src="fruits images/duhat.jpg" alt="Duhat Fruit">
+        <h3>Duhat</h3>
+        <p>Known as the Philippine Black Plum, rich in antioxidants and a must-try summer fruit.</p>
+      </div>
+      <div class="card">
+        <img src="fruits images/lanzones.jpg" alt="Lanzones Fruit">
+        <h3>Lanzones</h3>
+        <p>Sweet, tangy, and celebrated in festivals. A fruit that unites communities.</p>
+      </div>
+      <div class="card">
+        <img src="fruits images/atis.jpg" alt="Atis Fruit">
+        <h3>Atis</h3>
+        <p>Also called Sugar Apple — sweet, creamy, and packed with vitamin C.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mission">
+    <h2>Our Mission</h2>
+    <p>To promote awareness, appreciation, and conservation of Philippine native fruits.</p>
+  </section>
+
+  <section class="container vision">
+    <h2>Our Vision</h2>
+    <p>We envision a future where Philippine fruits are celebrated and enjoyed worldwide.</p>
+  </section>
+
+  <section class="container testimonials">
+    <h2>What People Are Saying</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial">
+        <p>🌟 "A beautiful tribute to our heritage! I discovered so many fruits I didn't even know existed." - <strong>Maria D.</strong></p>
+      </div>
+      <div class="testimonial">
+        <p>🌟 "Visiting this site felt like a colorful, flavorful journey across the islands!" - <strong>James T.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container social">
+    <h2>Follow Us</h2>
+    <p>Stay connected and spread the love for our local fruits:</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100064373160065" target="_blank">🌐 Facebook</a>
+      <a href="https://www.instagram.com/" target="_blank">📸 Instagram</a>
+      <a href="https://www.youtube.com/watch?v=VLGDWYiBGgo" target="_blank">🎥 YouTube</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bunga ng Bayan | All rights reserved.</p>
+  </footer>
+
+  <script>
+    var isLoggedIn = false;
+
+    window.onload = function() {
+      var loginBtn = document.getElementById('login-btn');
+      var logoutBtn = document.getElementById('logout-btn');
+
+      if (isLoggedIn) {
+        loginBtn.style.display = "none";
+        logoutBtn.style.display = "inline-block";
+      } else {
+        loginBtn.style.display = "inline-block";
+        logoutBtn.style.display = "none";
+      }
+    };
+
+    function checkLogin() {
+      if (isLoggedIn) {
+        window.location.href = "fruits.html";
+      } else {
+        alert("Please login first to explore more!");
+        window.location.href = "login.html";
+      }
+    }
+
+    function checkLoginLink(event) {
+      if (!isLoggedIn) {
+        event.preventDefault();
+        alert("Please login first to access this page!");
+        window.location.href = "login.html";
+        return false;
+      }
+    }
+
+    function logout() {
+      isLoggedIn = false;
+      alert("You have been logged out!");
+      window.location.href = "home.html";
+    }
+  </script>
+</body>
+</html>

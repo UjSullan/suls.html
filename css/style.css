@@ -1,0 +1,196 @@
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* background-image: url('fruits\ images/fruits.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #fff8f0;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #008000;
+  }
+  
+  header {
+    background-color: #f1e6d6;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: #006400;
+  }
+  
+  header p {
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: #444;
+  }
+  
+  nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    padding: 0.5rem 1rem;
+    background-color: #e0cda9;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #d4af7f;
+    color: white;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  /* Landing page */
+  .landing {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .landing-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2f4f4f;
+  }
+  
+  .landing-text p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    background-color: #3c8d2f;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .btn:hover {
+    background-color: #2d6f22;
+  }
+  
+  .landing-image img {
+    max-width: 300px;
+    border-radius: 1rem;
+  }
+  
+  /* Dashboard page */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  /* Updated Highlight Cards with Pastel Colors */
+.card {
+  background: linear-gradient(135deg, #f9fbe7, #e8f5e9);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex: 1 1 300px;
+  max-width: 340px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 2rem 1.5rem;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.7rem;
+  color: #2e7d32;
+  margin-bottom: 0.7rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #e8f5e9, #f9fbe7);
+}
+
+/* Testimonials with soft pastel */
+.testimonial {
+  background: linear-gradient(135deg, #f1f8e9, #fce4ec);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+  .card a:hover {
+    background-color: #2d6f22;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1e6d6;
+    color: #333;
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) {
+    .landing {
+      flex-direction: row;
+      text-align: left;
+    }
+  
+    .landing-text {
+      flex: 1;
+    }
+  
+    .landing-image {
+      flex: 1;
+    }
+  }
+  
+
+  
